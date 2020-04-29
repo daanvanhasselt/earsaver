@@ -51,6 +51,10 @@ const Lang = {
             messagePlaceholder: 'Jouw bericht..',
             submitButtonTitle: 'Stuur bericht'
         }
+    },
+    error: {
+        title: 'Er is iets misgegaan',
+        buttonTitle: 'Ga terug naar de homepage'
     }
 }
 

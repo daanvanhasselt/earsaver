@@ -8,8 +8,7 @@ import Scroller from "../components/scroller"
 import PortfolioModal from "../components/portfolio/modal"
 import PortfolioCarousel from "../components/portfolio/carousel"
 
-import LangNL from "../lang/nl"
-import LangEN from "../lang/en"
+import Lang from "../lang"
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -46,24 +45,10 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
-    const url = this.props.location ? this.props.location.search : ""
-    const urlParams = new URLSearchParams(url)
-    let langId = "nl"
-    if(urlParams.has('lang')) {
-      langId = urlParams.get('lang')
-    }
-
-    let Lang = {}
-    switch(langId) {
-      case "nl":
-        Lang = LangNL
-        break
-      default:
-        Lang = LangEN
-    }
+    const { langId, langData } = Lang(this.props)
 
     return (
-      <Layout lang={Lang}>
+      <Layout lang={langData}>
         <SEO title="EarSaver" lang={langId}/>
         {/* <section className="page-section bg-primary" id="about">
           <div className="container">
@@ -85,35 +70,35 @@ export default class IndexPage extends React.Component {
 
         <section className="page-section" id="instructions">
           <div className="container">
-            <h2 className="text-center mt-0">{Lang.instructions.title}</h2>
+            <h2 className="text-center mt-0">{langData.instructions.title}</h2>
             <hr className="divider my-4"/>
             <div className="row">
               <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
                   <img className="instruction" src="/img/instructions/1.png"/>
-                  <h3 className="h4 mb-2">{Lang.instructions.steps[0].title}</h3>
-                  <p className="text-muted mb-0">{Lang.instructions.steps[0].description}</p>
+                  <h3 className="h4 mb-2">{langData.instructions.steps[0].title}</h3>
+                  <p className="text-muted mb-0">{langData.instructions.steps[0].description}</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
                   <img className="instruction" src="/img/instructions/2.png"/>
-                  <h3 className="h4 mb-2">{Lang.instructions.steps[1].title}</h3>
-                  <p className="text-muted mb-0">{Lang.instructions.steps[1].description}</p>
+                  <h3 className="h4 mb-2">{langData.instructions.steps[1].title}</h3>
+                  <p className="text-muted mb-0">{langData.instructions.steps[1].description}</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
                 <img className="instruction" src="/img/instructions/3.png"/>
-                  <h3 className="h4 mb-2">{Lang.instructions.steps[2].title}</h3>
-                  <p className="text-muted mb-0">{Lang.instructions.steps[2].description}</p>
+                  <h3 className="h4 mb-2">{langData.instructions.steps[2].title}</h3>
+                  <p className="text-muted mb-0">{langData.instructions.steps[2].description}</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
                 <img className="instruction" src="/img/instructions/4.png"/>
-                  <h3 className="h4 mb-2">{Lang.instructions.steps[3].title}</h3>
-                  <p className="text-muted mb-0">{Lang.instructions.steps[3].description}</p>
+                  <h3 className="h4 mb-2">{langData.instructions.steps[3].title}</h3>
+                  <p className="text-muted mb-0">{langData.instructions.steps[3].description}</p>
                 </div>
               </div>
             </div>
@@ -131,10 +116,10 @@ export default class IndexPage extends React.Component {
             <div className="container text-center">
               {/* <h2 className="mb-4">Download the Production Kit</h2>
               <p className="text-muted mb-5">Wanna help out? Download the Production Kit and start making EarSavers!</p> */}
-              <h2 className="mb-4">{Lang.produce.title}</h2>
-              <p className="text-muted mb-5">{Lang.produce.paragraph1}</p>
-              <p className="text-muted mb-5">{Lang.produce.paragraph2}</p>
-              <a className="btn btn-light btn-xl" href="/EarSaver-STL.zip">{Lang.produce.downloadButtonTitle}</a>
+              <h2 className="mb-4">{langData.produce.title}</h2>
+              <p className="text-muted mb-5">{langData.produce.paragraph1}</p>
+              <p className="text-muted mb-5">{langData.produce.paragraph2}</p>
+              <a className="btn btn-light btn-xl" href="/EarSaver-STL.zip">{langData.produce.downloadButtonTitle}</a>
             </div>
           </section>
 
@@ -144,9 +129,9 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <h2 className="mt-0">{Lang.contact.title}</h2>
+                <h2 className="mt-0">{langData.contact.title}</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">{Lang.contact.paragraph}</p>
+                <p className="text-muted mb-5">{langData.contact.paragraph}</p>
               </div>
             </div>
 
@@ -154,15 +139,15 @@ export default class IndexPage extends React.Component {
               <input name="form-name" value="earsaver-contact" type="hidden" />
 
               <div className="form-group">
-                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={Lang.contact.form.emailPlaceholder} required/>
-                <small id="emailHelp" className="form-text text-muted">{Lang.contact.form.emailDisclaimer}</small>
+                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={langData.contact.form.emailPlaceholder} required/>
+                <small id="emailHelp" className="form-text text-muted">{langData.contact.form.emailDisclaimer}</small>
               </div>
 
               <div className="form-group">
-                <textarea name="message" className="form-control" id="message" rows="3" placeholder={Lang.contact.form.messagePlaceholder}></textarea>
+                <textarea name="message" className="form-control" id="message" rows="3" placeholder={langData.contact.form.messagePlaceholder}></textarea>
               </div>
 
-              <button style={{width:'100%'}} type="submit" className="btn btn-primary">{Lang.contact.form.submitButtonTitle}</button>
+              <button style={{width:'100%'}} type="submit" className="btn btn-primary">{langData.contact.form.submitButtonTitle}</button>
             </form>
             
           </div>

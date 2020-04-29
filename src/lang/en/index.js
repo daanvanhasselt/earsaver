@@ -51,6 +51,10 @@ const Lang = {
             messagePlaceholder: 'Your message..',
             submitButtonTitle: 'Send message'
         }
+    },
+    error: {
+        title: 'Something went wrong',
+        buttonTitle: 'Return to the homepage'
     }
 }
 
