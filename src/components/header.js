@@ -40,10 +40,12 @@ export default class Header extends React.Component {
                   <li className="nav-item d-lg-none">
                     <Nav.Link>_</Nav.Link>
                   </li>
-                  <li className="nav-item">
-                    {this.props.lang.id == 'en' && <Nav.Link href="?lang=nl">Nederlands</Nav.Link> }
-                    {this.props.lang.id == 'nl' && <Nav.Link href="?lang=en">English</Nav.Link> }
-                  </li>
+                  {this.props.lang.id === 'en' && (<li className="nav-item">
+                    <Nav.Link href="?lang=nl">Nederlands</Nav.Link>
+                  </li>) }
+                  {this.props.lang.id === 'nl' && (<li className="nav-item">
+                    <Nav.Link href="?lang=en">English</Nav.Link>
+                  </li>) }
                 </Scrollspy>
               </Nav>
             </Navbar.Collapse>
