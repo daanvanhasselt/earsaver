@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/gatsby-creative`,
   siteMetadata: {
     title: `EarSaver`,
-    description: `The EarSaver makes wearing a facemask a lot more comfortable.`,
+    description: `EarSaver maakt het dragen van een masker een stuk comfortabeler.`,
     author: `@gatsbyjs`,
   },
   plugins: [
