@@ -35,7 +35,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Home"/>
+        <SEO title="Comfort for healthworkers"/>
         {/* <section className="page-section bg-primary" id="about">
           <div className="container">
             <div className="row justify-content-center">
@@ -209,10 +209,10 @@ export default class IndexPage extends React.Component {
               </div>
 
               <div className="form-group">
-                <textarea class="form-control" id="message" rows="3" placeholder="Your message.."></textarea>
+                <textarea className="form-control" id="message" rows="3" placeholder="Your message.."></textarea>
               </div>
 
-              <button style={{width:'100%'}} type="submit" class="btn btn-primary">Send message</button>
+              <button style={{width:'100%'}} type="submit" className="btn btn-primary">Send message</button>
             </form>
             
           </div>
