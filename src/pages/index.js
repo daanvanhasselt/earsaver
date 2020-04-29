@@ -193,7 +193,22 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
 
-            <form name="contact-form" netlify>
+
+            <form name="test-contact-form" method="POST" data-netlify="true">
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>   
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
+            {/* <form name="contact-form" netlify>
               <div className="row">
                 <div className="col-lg-4 ml-auto text-right mb-5 mb-lg-0">
                   <label>Name</label>
@@ -222,7 +237,7 @@ export default class IndexPage extends React.Component {
 
               
 
-            </form>
+            </form> */}
             
           </div>
         </section>
