@@ -178,9 +178,12 @@ export default class IndexPage extends React.Component {
 
         <section className="page-section bg-dark text-white">
           <div className="container text-center">
-            <h2 className="mb-4">Download the Production Kit</h2>
-            <p className="text-muted mb-5">Wanna help out? Download the Production Kit and start making EarSavers!</p>
-            <a className="btn btn-light btn-xl" href="#">Download Now!</a>
+            {/* <h2 className="mb-4">Download the Production Kit</h2>
+            <p className="text-muted mb-5">Wanna help out? Download the Production Kit and start making EarSavers!</p> */}
+            <h2 className="mb-4">Download the 3D model</h2>
+            <p className="text-muted mb-5">Wanna help out? Download the STL file and start making EarSavers!</p>
+            <p className="text-muted mb-5">A full <i>Production Kit</i> with more resources and instructions will be available soon.</p>
+            <a className="btn btn-light btn-xl" href="/EarSaver.stl">Download Now!</a>
           </div>
         </section>
 
