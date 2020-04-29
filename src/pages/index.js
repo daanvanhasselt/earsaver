@@ -194,7 +194,7 @@ export default class IndexPage extends React.Component {
             </div>
 
 
-            <form name="test-contact-form" method="POST" data-netlify="true">
+            <form name="test-contact-form" method="POST" data-netlify="true" action="thank-you">
               <p>
                 <label>Your Name: <input type="text" name="name" /></label>   
               </p>
