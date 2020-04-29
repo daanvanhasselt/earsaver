@@ -15,7 +15,7 @@ export default class Header extends React.Component {
         <Navbar className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" expand="lg"
                 collapseOnSelect={true}>
           <div className="container">
-            <a className="navbar-brand js-scroll-trigger" href="#page-top" onClick={Scroller.handleAnchorScroll}>EarSaver</a>
+            <a className="navbar-brand js-scroll-trigger" href="#page-top" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navTitle}</a>
             <Navbar.Toggle aria-controls="navbarResponsive"/>
             <Navbar.Collapse id="navbarResponsive">
               <Nav className="navbar-nav ml-auto my-2 my-lg-0">
@@ -26,13 +26,20 @@ export default class Header extends React.Component {
                     <Nav.Link className={"js-scroll-trigger"} href="#about" onClick={Scroller.handleAnchorScroll}>About</Nav.Link>
                   </li> */}
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#instructions" onClick={Scroller.handleAnchorScroll}>Instructions</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href="#instructions" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navInstructions}</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#portfolio" onClick={Scroller.handleAnchorScroll}>Start producing</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href="#portfolio" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navProduce}</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#contact" onClick={Scroller.handleAnchorScroll}>Contact</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href="#contact" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navContact}</Nav.Link>
+                  </li>
+                  <li className="nav-item">
+                  <Nav.Link>|</Nav.Link>
+                  </li>
+                  <li className="nav-item">
+                    {this.props.lang.id == 'en' && <Nav.Link href="/">Nederlands</Nav.Link> }
+                    {this.props.lang.id == 'nl' && <Nav.Link href="?lang=en">English</Nav.Link> }
                   </li>
                 </Scrollspy>
               </Nav>
@@ -43,12 +50,13 @@ export default class Header extends React.Component {
           <div className="container h-100">
             <div className="row h-100 align-items-center justify-content-center text-center">
               <div className="col-lg-10 align-self-end">
-                <h1 className="text-uppercase text-white font-weight-bold">Increased comfort for healthcare workers</h1>
+                <h1 className="text-uppercase text-white font-weight-bold">{this.props.lang.header.heroTitle}</h1>
                 <hr className="divider my-4"/>
               </div>
               <div className="col-lg-8 align-self-baseline">
-                <p className="text-white-75 font-weight-light mb-5">Wearing a face mask for extended periods of time adds unwanted strain to the ears and can cause headaches. EarSaver is a simple DIY solution to this problem.<br/><br/> Our aim is to provide every healthcare worker with an EarSaver.<br/> Request yours here - completely free of charge, no strings attached!</p>
-                <a className="btn btn-primary btn-xl js-scroll-trigger" href="#contact" onClick={Scroller.handleAnchorScroll}>Request a batch</a>
+                <p className="text-white-75 font-weight-light mb-5">{this.props.lang.header.heroSubtitle1}</p> 
+                <p className="text-white-75 font-weight-light mb-5">{this.props.lang.header.heroSubtitle2}<br/>{this.props.lang.header.heroSubtitle3}</p>
+                <a className="btn btn-primary btn-xl js-scroll-trigger" href="#contact" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.requestButtonTitle}</a>
               </div>
             </div>
           </div>

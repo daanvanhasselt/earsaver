@@ -8,6 +8,9 @@ import Scroller from "../components/scroller"
 import PortfolioModal from "../components/portfolio/modal"
 import PortfolioCarousel from "../components/portfolio/carousel"
 
+import LangNL from "../lang/nl"
+import LangEN from "../lang/en"
+
 export default class IndexPage extends React.Component {
   constructor(props) {
     super(props)
@@ -43,9 +46,27 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
+    // TODO: pass current language to SEO
+    console.log(this.props)
+    const url = this.props.location ? this.props.location.search : ""
+    const urlParams = new URLSearchParams(url)
+    let lang = "nl"
+    if(urlParams.has('lang')) {
+      lang = urlParams.get('lang')
+    }
+
+    let Lang = {}
+    switch(lang) {
+      case "nl":
+        Lang = LangNL
+        break
+      default:
+        Lang = LangEN
+    }
+
     return (
-      <Layout>
-        <SEO title="Comfort for healthworkers"/>
+      <Layout lang={Lang}>
+        <SEO title="EarSaver" lang="en"/>
         {/* <section className="page-section bg-primary" id="about">
           <div className="container">
             <div className="row justify-content-center">
@@ -66,35 +87,35 @@ export default class IndexPage extends React.Component {
 
         <section className="page-section" id="instructions">
           <div className="container">
-            <h2 className="text-center mt-0">How To Use</h2>
+            <h2 className="text-center mt-0">{Lang.instructions.title}</h2>
             <hr className="divider my-4"/>
             <div className="row">
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-gem text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">1. Attach one side</h3>
-                  <p className="text-muted mb-0">Before putting on your face mask, attach one of the elastic bands to the EarSaver.</p>
+                  <h3 className="h4 mb-2">{Lang.instructions.steps[0].title}</h3>
+                  <p className="text-muted mb-0">{Lang.instructions.steps[0].description}</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">2. Hold in place</h3>
-                  <p className="text-muted mb-0">With one elastic band attached, hold the EarSaver in place on the back of your head.</p>
+                  <h3 className="h4 mb-2">{Lang.instructions.steps[1].title}</h3>
+                  <p className="text-muted mb-0">{Lang.instructions.steps[1].description}</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-globe text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">3. Attach other side</h3>
-                  <p className="text-muted mb-0">While holding the EarSaver in place, attach the second elastic band.</p>
+                  <h3 className="h4 mb-2">{Lang.instructions.steps[2].title}</h3>
+                  <p className="text-muted mb-0">{Lang.instructions.steps[2].description}</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-heart text-primary mb-4"></i>
-                  <h3 className="h4 mb-2">4. Adjust for comfort</h3>
-                  <p className="text-muted mb-0">Adjust the tightness and placement of the EarSaver.</p>
+                  <h3 className="h4 mb-2">{Lang.instructions.steps[3].title}</h3>
+                  <p className="text-muted mb-0">{Lang.instructions.steps[3].description}</p>
                 </div>
               </div>
             </div>
@@ -112,10 +133,10 @@ export default class IndexPage extends React.Component {
             <div className="container text-center">
               {/* <h2 className="mb-4">Download the Production Kit</h2>
               <p className="text-muted mb-5">Wanna help out? Download the Production Kit and start making EarSavers!</p> */}
-              <h2 className="mb-4">Download the 3D model</h2>
-              <p className="text-muted mb-5">Wanna help out? Download the STL file and start making EarSavers!</p>
-              <p className="text-muted mb-5">A full <i>Production Kit</i> with more resources and instructions will be available soon.</p>
-              <a className="btn btn-light btn-xl" href="/EarSaver-STL.zip">Download Now!</a>
+              <h2 className="mb-4">{Lang.produce.title}</h2>
+              <p className="text-muted mb-5">{Lang.produce.paragraph1}</p>
+              <p className="text-muted mb-5">{Lang.produce.paragraph2}</p>
+              <a className="btn btn-light btn-xl" href="/EarSaver-STL.zip">{Lang.produce.downloadButtonTitle}</a>
             </div>
           </section>
 
@@ -125,12 +146,9 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <h2 className="mt-0">Get in touch!</h2>
+                <h2 className="mt-0">{Lang.contact.title}</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">Would you like to request a batch of EarSavers for you and your co-workers? Or do you have any feedback you'd like to share with the team?<br/><br/>
-                We love to hear from you!<br/><br/>
-                Please fill in the form below and we will get back to you as soon as possible.
-                </p>
+                <p className="text-muted mb-5">{Lang.contact.paragraph}</p>
               </div>
             </div>
 
@@ -138,15 +156,15 @@ export default class IndexPage extends React.Component {
               <input name="form-name" value="earsaver-contact" type="hidden" />
 
               <div className="form-group">
-                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Your email" required/>
-                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={Lang.contact.form.emailPlaceholder} required/>
+                <small id="emailHelp" className="form-text text-muted">{Lang.contact.form.emailDisclaimer}</small>
               </div>
 
               <div className="form-group">
-                <textarea name="message" className="form-control" id="message" rows="3" placeholder="Your message.."></textarea>
+                <textarea name="message" className="form-control" id="message" rows="3" placeholder={Lang.contact.form.messagePlaceholder}></textarea>
               </div>
 
-              <button style={{width:'100%'}} type="submit" className="btn btn-primary">Send message</button>
+              <button style={{width:'100%'}} type="submit" className="btn btn-primary">{Lang.contact.form.submitButtonTitle}</button>
             </form>
             
           </div>
