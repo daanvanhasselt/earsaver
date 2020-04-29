@@ -36,7 +36,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home"/>
-        <section className="page-section bg-primary" id="about">
+        {/* <section className="page-section bg-primary" id="about">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
@@ -52,9 +52,9 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="page-section" id="services">
+        <section className="page-section" id="instructions">
           <div className="container">
             <h2 className="text-center mt-0">At Your Service</h2>
             <hr className="divider my-4"/>
@@ -97,79 +97,79 @@ export default class IndexPage extends React.Component {
               <div className="col-lg-4 col-sm-6">
                 <a className="portfolio-box" href="img/portfolio/fullsize/1.jpg" onClick={this.handlePortfolioClick.bind(this, 0)}>
                   <Img fluid={this.props.data.images.edges[0].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
+                  {/* <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
                       Category
                     </div>
                     <div className="project-name">
                       Project Name
                     </div>
-                  </div>
+                  </div> */}
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6">
                 <a className="portfolio-box" href="img/portfolio/fullsize/2.jpg" onClick={this.handlePortfolioClick.bind(this, 1)}>
                   <Img fluid={this.props.data.images.edges[1].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
+                  {/* <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
                       Category
                     </div>
                     <div className="project-name">
                       Project Name
                     </div>
-                  </div>
+                  </div> */}
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6">
                 <a className="portfolio-box" href="img/portfolio/fullsize/3.jpg" onClick={this.handlePortfolioClick.bind(this, 2)}>
                   <Img fluid={this.props.data.images.edges[2].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
+                  {/* <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
                       Category
                     </div>
                     <div className="project-name">
                       Project Name
                     </div>
-                  </div>
+                  </div> */}
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6">
                 <a className="portfolio-box" href="images/portfolio/fullsize/4.jpg" onClick={this.handlePortfolioClick.bind(this, 3)}>
                   <Img fluid={this.props.data.images.edges[3].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
+                  {/* <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
                       Category
                     </div>
                     <div className="project-name">
                       Project Name
                     </div>
-                  </div>
+                  </div> */}
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6">
                 <a className="portfolio-box" href="img/portfolio/fullsize/5.jpg" onClick={this.handlePortfolioClick.bind(this, 4)}>
                   <Img fluid={this.props.data.images.edges[4].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption">
+                  {/* <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
                       Category
                     </div>
                     <div className="project-name">
                       Project Name
                     </div>
-                  </div>
+                  </div> */}
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6">
                 <a className="portfolio-box" href="img/portfolio/fullsize/6.jpg" onClick={this.handlePortfolioClick.bind(this, 5)}>
                   <Img fluid={this.props.data.images.edges[5].node.childImageSharp.fluid}/>
-                  <div className="portfolio-box-caption p-3">
+                  {/* <div className="portfolio-box-caption p-3">
                     <div className="project-category text-white-50">
                       Category
                     </div>
                     <div className="project-name">
                       Project Name
                     </div>
-                  </div>
+                  </div> */}
                 </a>
               </div>
             </div>
@@ -178,8 +178,9 @@ export default class IndexPage extends React.Component {
 
         <section className="page-section bg-dark text-white">
           <div className="container text-center">
-            <h2 className="mb-4">Free Download at Start Bootstrap!</h2>
-            <a className="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
+            <h2 className="mb-4">Download the Production Kit</h2>
+            <p className="text-muted mb-5">Wanna help out? Download the Production Kit and start making EarSavers!</p>
+            <a className="btn btn-light btn-xl" href="#">Download Now!</a>
           </div>
         </section>
 
@@ -187,29 +188,29 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <h2 className="mt-0">Ask us anything!</h2>
+                <h2 className="mt-0">Get in touch!</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">Would you like to request a batch of earsavers for you and your coworkers? Or do you have any feedback you'd like to share with the team?</p>
+                <p className="text-muted mb-5">Would you like to request a batch of EarSavers for you and your coworkers? Or do you have any feedback you'd like to share with the team?<br/><br/>
+                We love to hear from you!<br/><br/>
+                Please fill in the form below and we will get back to you as soon as possible.
+                </p>
               </div>
             </div>
 
-            <div className="row">
-              <form name="earsaver-contact" method="POST" data-netlify="true">
-                <input name="form-name" value="earsaver-contact" type="hidden" />
-                <p>
-                  <label>Your Name: <input type="text" name="name" /></label>   
-                </p>
-                <p>
-                  <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                  <label>Your Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
-            </div>
+            <form name="earsaver-contact" method="POST" data-netlify="true">
+              <input name="form-name" value="earsaver-contact" type="hidden" />
+
+              <div className="form-group">
+                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"/>
+                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+
+              <div className="form-group">
+                <textarea class="form-control" id="message" rows="3" placeholder="Your message.."></textarea>
+              </div>
+
+              <button style={{width:'100%'}} type="submit" class="btn btn-primary">Send message</button>
+            </form>
             
           </div>
         </section>

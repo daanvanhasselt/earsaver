@@ -20,16 +20,16 @@ export default class Header extends React.Component {
             <Navbar.Collapse id="navbarResponsive">
               <Nav className="navbar-nav ml-auto my-2 my-lg-0">
                 <Scrollspy className="navbar-nav"
-                           items={["about", "services", "portfolio", "contact"]}
+                           items={[/*"about", */"instructions", "portfolio", "contact"]}
                            currentClassName="active" rootEl={"#mainNav"} offset={-75}>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href="#about" onClick={Scroller.handleAnchorScroll}>About</Nav.Link>
+                  </li> */}
+                  <li className="nav-item">
+                    <Nav.Link className={"js-scroll-trigger"} href="#instructions" onClick={Scroller.handleAnchorScroll}>Instructions</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#services" onClick={Scroller.handleAnchorScroll}>Services</Nav.Link>
-                  </li>
-                  <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#portfolio" onClick={Scroller.handleAnchorScroll}>Portfolio</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href="#portfolio" onClick={Scroller.handleAnchorScroll}>Start producing</Nav.Link>
                   </li>
                   <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href="#contact" onClick={Scroller.handleAnchorScroll}>Contact</Nav.Link>
@@ -47,8 +47,8 @@ export default class Header extends React.Component {
                 <hr className="divider my-4"/>
               </div>
               <div className="col-lg-8 align-self-baseline">
-                <p className="text-white-75 font-weight-light mb-5">Our aim is to provide every healthcare worker with an EarSaver. Request yours here - completely free of charge, no strings attached!</p>
-                <a className="btn btn-primary btn-xl js-scroll-trigger" href="#about" onClick={Scroller.handleAnchorScroll}>Request a batch</a>
+                <p className="text-white-75 font-weight-light mb-5">Our aim is to provide every healthcare worker with an EarSaver.<br/> Request yours here - completely free of charge, no strings attached!</p>
+                <a className="btn btn-primary btn-xl js-scroll-trigger" href="#contact" onClick={Scroller.handleAnchorScroll}>Request a batch</a>
               </div>
             </div>
           </div>
