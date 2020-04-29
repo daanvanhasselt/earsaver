@@ -193,51 +193,23 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
 
-
-            <form name="test-contact-form" method="POST" data-netlify="true" action="thank-you">
-              <p>
-                <label>Your Name: <input type="text" name="name" /></label>   
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email" /></label>
-              </p>
-              <p>
-                <label>Message: <textarea name="message"></textarea></label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form>
-            {/* <form name="contact-form" netlify>
-              <div className="row">
-                <div className="col-lg-4 ml-auto text-right mb-5 mb-lg-0">
-                  <label>Name</label>
-                </div>
-                <div className="col-lg-4 mr-auto text-left">
-                  <input type="text" name="name"/>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-lg-4 ml-auto text-right mb-5 mb-lg-0">
-                  <label>E-mail</label>
-                </div>
-                <div className="col-lg-4 mr-auto text-left">
-                  <input type="text" name="email"/>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-lg-8 mr-auto text-left">
-                  <textarea name="message" placeholder="Enter text here.."></textarea>
-                </div>
-              </div>
-
-            <button type="submit">Send</button>
-
-              
-
-            </form> */}
+            <div className="row">
+              <form name="earsaver-contact" method="POST" data-netlify="true">
+                <input name="form-name" value="earsaver-contact" type="hidden" />
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Your Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+            </div>
             
           </div>
         </section>
