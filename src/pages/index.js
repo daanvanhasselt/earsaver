@@ -193,7 +193,7 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
 
-            <form name="contact" netlify>
+            <form name="contact" data-netlify="true">
               <div className="row">
                 <div className="col-lg-4 ml-auto text-right mb-5 mb-lg-0">
                   <label>Name</label>
