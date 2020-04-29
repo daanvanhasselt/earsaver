@@ -26,13 +26,13 @@ export default class Header extends React.Component {
                     <Nav.Link className={"js-scroll-trigger"} href="#about" onClick={Scroller.handleAnchorScroll}>About</Nav.Link>
                   </li> */}
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#instructions" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navInstructions}</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#instructions"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navInstructions}</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#portfolio" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navProduce}</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#portfolio"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navProduce}</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#contact" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navContact}</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#contact"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navContact}</Nav.Link>
                   </li>
                   <li className="nav-item d-none d-lg-block">
                     <Nav.Link>|</Nav.Link>
@@ -40,12 +40,10 @@ export default class Header extends React.Component {
                   <li className="nav-item d-lg-none">
                     <Nav.Link>_</Nav.Link>
                   </li>
-                  {this.props.lang.id === 'en' && (<li className="nav-item">
-                    <Nav.Link href="?lang=nl">Nederlands</Nav.Link>
-                  </li>) }
-                  {this.props.lang.id === 'nl' && (<li className="nav-item">
-                    <Nav.Link href="?lang=en">English</Nav.Link>
-                  </li>) }
+                  <li className="nav-item">
+                    {this.props.lang.id === 'en' && <Nav.Link href="/?lang=nl">Nederlands</Nav.Link> }
+                    {this.props.lang.id === 'nl' && <Nav.Link href="/?lang=en">English</Nav.Link> }
+                  </li>
                 </Scrollspy>
               </Nav>
             </Navbar.Collapse>
