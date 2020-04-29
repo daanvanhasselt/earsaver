@@ -34,8 +34,11 @@ export default class Header extends React.Component {
                   <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href="#contact" onClick={Scroller.handleAnchorScroll}>{this.props.lang.header.navContact}</Nav.Link>
                   </li>
-                  <li className="nav-item">
-                  <Nav.Link>|</Nav.Link>
+                  <li className="nav-item d-none d-lg-block">
+                    <Nav.Link>|</Nav.Link>
+                  </li>
+                  <li className="nav-item d-lg-none">
+                    <Nav.Link>_</Nav.Link>
                   </li>
                   <li className="nav-item">
                     {this.props.lang.id == 'en' && <Nav.Link href="/">Nederlands</Nav.Link> }

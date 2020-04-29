@@ -46,17 +46,15 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
-    // TODO: pass current language to SEO
-    console.log(this.props)
     const url = this.props.location ? this.props.location.search : ""
     const urlParams = new URLSearchParams(url)
-    let lang = "nl"
+    let langId = "nl"
     if(urlParams.has('lang')) {
-      lang = urlParams.get('lang')
+      langId = urlParams.get('lang')
     }
 
     let Lang = {}
-    switch(lang) {
+    switch(langId) {
       case "nl":
         Lang = LangNL
         break
@@ -66,7 +64,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout lang={Lang}>
-        <SEO title="EarSaver" lang="en"/>
+        <SEO title="EarSaver" lang={langId}/>
         {/* <section className="page-section bg-primary" id="about">
           <div className="container">
             <div className="row justify-content-center">
@@ -90,30 +88,30 @@ export default class IndexPage extends React.Component {
             <h2 className="text-center mt-0">{Lang.instructions.title}</h2>
             <hr className="divider my-4"/>
             <div className="row">
-              <div className="col-lg-3 col-md-6 text-center">
+              <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-gem text-primary mb-4"></i>
+                  <img className="instruction" src="/img/instructions/1.png"/>
                   <h3 className="h4 mb-2">{Lang.instructions.steps[0].title}</h3>
                   <p className="text-muted mb-0">{Lang.instructions.steps[0].description}</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 text-center">
+              <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                  <img className="instruction" src="/img/instructions/2.png"/>
                   <h3 className="h4 mb-2">{Lang.instructions.steps[1].title}</h3>
                   <p className="text-muted mb-0">{Lang.instructions.steps[1].description}</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 text-center">
+              <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-globe text-primary mb-4"></i>
+                <img className="instruction" src="/img/instructions/3.png"/>
                   <h3 className="h4 mb-2">{Lang.instructions.steps[2].title}</h3>
                   <p className="text-muted mb-0">{Lang.instructions.steps[2].description}</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 text-center">
+              <div className="col-lg-6 col-md-12 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-heart text-primary mb-4"></i>
+                <img className="instruction" src="/img/instructions/4.png"/>
                   <h3 className="h4 mb-2">{Lang.instructions.steps[3].title}</h3>
                   <p className="text-muted mb-0">{Lang.instructions.steps[3].description}</p>
                 </div>
