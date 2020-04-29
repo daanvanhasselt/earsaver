@@ -204,12 +204,12 @@ export default class IndexPage extends React.Component {
               <input name="form-name" value="earsaver-contact" type="hidden" />
 
               <div className="form-group">
-                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"/>
+                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Your email"/>
                 <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
 
               <div className="form-group">
-                <textarea className="form-control" id="message" rows="3" placeholder="Your message.."></textarea>
+                <textarea name="message" className="form-control" id="message" rows="3" placeholder="Your message.."></textarea>
               </div>
 
               <button style={{width:'100%'}} type="submit" className="btn btn-primary">Send message</button>
