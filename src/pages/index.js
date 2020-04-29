@@ -138,7 +138,7 @@ export default class IndexPage extends React.Component {
               <input name="form-name" value="earsaver-contact" type="hidden" />
 
               <div className="form-group">
-                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Your email"/>
+                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Your email" required/>
                 <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
 
