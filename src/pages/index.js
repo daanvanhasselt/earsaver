@@ -187,23 +187,43 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <h2 className="mt-0">Let's Get In Touch!</h2>
+                <h2 className="mt-0">Ask us anything!</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an
-                  email
-                  and we will get back to you as soon as possible!</p>
+                <p className="text-muted mb-5">Would you like to request a batch of earsavers for you and your coworkers? Or do you have any feedback you'd like to share with the team?</p>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i className="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div>+1 (202) 555-0149</div>
+
+            <form name="contact" netlify>
+              <div className="row">
+                <div className="col-lg-4 ml-auto text-right mb-5 mb-lg-0">
+                  <label>Name</label>
+                </div>
+                <div className="col-lg-4 mr-auto text-left">
+                  <input type="text" name="name"/>
+                </div>
               </div>
-              <div className="col-lg-4 mr-auto text-center">
-                <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <a className="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+
+              <div className="row">
+                <div className="col-lg-4 ml-auto text-right mb-5 mb-lg-0">
+                  <label>E-mail</label>
+                </div>
+                <div className="col-lg-4 mr-auto text-left">
+                  <input type="text" name="email"/>
+                </div>
               </div>
-            </div>
+
+              <div className="row">
+                <div className="col-lg-8 mr-auto text-left">
+                  <textarea name="message" placeholder="Enter text here.."></textarea>
+                </div>
+              </div>
+
+            <button type="submit">Send</button>
+
+              
+
+            </form>
+            
           </div>
         </section>
         <PortfolioModal show={this.state.modalShow} onHide={() => this.setModal(false, 0)}>
