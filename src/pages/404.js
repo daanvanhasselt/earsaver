@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Lang from "../lang"
 
 const NotFoundPage = (props) => {
-  const { langId, langData } = Lang(props)
+  const { langId, langData } = Lang(props.pageContext.lang || 'nl')
 
   return (
     <Layout lang={langData} error={true}>

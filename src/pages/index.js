@@ -21,7 +21,7 @@ export default class IndexPage extends React.Component {
     this.handlePortfolioClick = this.handlePortfolioClick.bind(this);
     this.setModal = this.setModal.bind(this);
 
-    const { langId, langData } = Lang(this.props)
+    const { langId, langData } = Lang(this.props.pageContext.lang || 'nl')
     this.langId = langId
     this.langData = langData
 
