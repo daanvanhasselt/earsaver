@@ -183,7 +183,7 @@ export default class IndexPage extends React.Component {
             <h2 className="mb-4">Download the 3D model</h2>
             <p className="text-muted mb-5">Wanna help out? Download the STL file and start making EarSavers!</p>
             <p className="text-muted mb-5">A full <i>Production Kit</i> with more resources and instructions will be available soon.</p>
-            <a className="btn btn-light btn-xl" href="/EarSaver.stl">Download Now!</a>
+            <a className="btn btn-light btn-xl" href="/EarSaver-STL.zip">Download Now!</a>
           </div>
         </section>
 
@@ -193,7 +193,7 @@ export default class IndexPage extends React.Component {
               <div className="col-lg-8 text-center">
                 <h2 className="mt-0">Get in touch!</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">Would you like to request a batch of EarSavers for you and your coworkers? Or do you have any feedback you'd like to share with the team?<br/><br/>
+                <p className="text-muted mb-5">Would you like to request a batch of EarSavers for you and your co-workers? Or do you have any feedback you'd like to share with the team?<br/><br/>
                 We love to hear from you!<br/><br/>
                 Please fill in the form below and we will get back to you as soon as possible.
                 </p>
