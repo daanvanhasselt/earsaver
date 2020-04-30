@@ -10,12 +10,42 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
+    /*{
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`
+        output: `/sitemap.xml`,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
+        serialize: ({ site, allSitePage }) => allSitePage.edges
+          .map(edge => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path, // https://sitemaps.com/page-path
+              changefreq: 'daily',
+              priority: 0.7,
+              links: [
+                // https://sitemaps.com/page-path
+                { lang: 'nl', url: site.siteMetadata.siteUrl + edge.node.path },
+                // https://sitemaps.com/en/page-path
+                { lang: 'en', url: `${site.siteMetadata.siteUrl}/en${edge.node.path}` }
+              ]
+            };
+          })
       }
-    },
+    },*/
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
