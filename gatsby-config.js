@@ -1,3 +1,5 @@
+const process = require('process')
+
 module.exports = {
   pathPrefix: `/gatsby-creative`,
   siteMetadata: {
@@ -13,6 +15,13 @@ module.exports = {
       options: {
         output: `/sitemap.xml`
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: process.env.GTM_ID,
+        includeInDevelopment: false
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
