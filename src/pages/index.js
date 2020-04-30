@@ -43,7 +43,7 @@ class IndexPage extends React.Component {
   }
 
   submitGTMEvent(event) {
-    if(window && window.dataLayer) {
+    if(typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
           event: event
         })
