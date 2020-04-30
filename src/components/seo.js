@@ -74,8 +74,8 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}>
-        <link rel="alternate" href={`http://www.earsaver.com/`} hrefLang={'nl'} key={'nl'}/>
-        <link rel="alternate" href={`http://www.earsaver.com/en`} hrefLang={'en'} key={'en'}/>
+        <link rel="alternate" href={`https://www.earsaver.com/`} hrefLang={'nl'} key={'nl'}/>
+        <link rel="alternate" href={`https://www.earsaver.com/en`} hrefLang={'en'} key={'en'}/>
     </Helmet>
   )
 }
