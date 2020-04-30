@@ -25,6 +25,12 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
+  // translate meta if not dutch
+  // a little hacky but i dont see support for multilanguage SEO
+  if(lang !== 'nl') {
+    description = 'EarSaver makes wearing a face mask a lot more comfortable.'
+  }
+
   const metaDescription = description || site.siteMetadata.description
 
   return (

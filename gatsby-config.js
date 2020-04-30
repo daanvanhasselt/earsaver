@@ -3,10 +3,17 @@ module.exports = {
   siteMetadata: {
     title: `EarSaver`,
     description: `EarSaver maakt het dragen van een masker een stuk comfortabeler.`,
-    author: `@gatsbyjs`,
+    author: `Daan van Hasselt`,
+    siteUrl: `https://www.earsaver.nl`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
