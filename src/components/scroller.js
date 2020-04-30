@@ -6,7 +6,7 @@ export default class Scroller {
     if(window.dataLayer) {
         window.dataLayer.push({
         event: 'gatsby-scroll-to-section',
-        section: id
+        section: id.slice(1)
       })
     }
     const document = element.ownerDocument.scrollingElement || element.ownerDocument.documentElement;
