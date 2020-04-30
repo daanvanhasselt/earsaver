@@ -17,25 +17,25 @@ const Lang = {
         title: 'How To Use',
         steps: [
             {
-                title: '1. Attach one side',
+                title: '1. Clean after use',
+                description: 'Easily clean the EarSaver using desinfecting alcohol.'
+            },
+            {
+                title: '2. Attach one side',
                 description: 'Before putting on your face mask, attach one of the elastic bands to the EarSaver.'
             },
             {
-                title: '2. Hold in place',
+                title: '3. Hold in place',
                 description: 'With one elastic band attached, hold the EarSaver in place on the back of your head.'
             },
             {
-                title: '3. Attach other side',
+                title: '4. Attach other side',
                 description: 'While holding the EarSaver in place, attach the second elastic band.'
             },
             {
-                title: '4. Adjust for comfort',
+                title: '5. Adjust for comfort',
                 description: 'Adjust the tightness and placement of the EarSaver.'
-            },
-            {
-                title: '5. Clean after use',
-                description: 'Easily clean the EarSaver using desinfecting alcohol.'
-            }
+            }            
         ]
     },
     produce: {

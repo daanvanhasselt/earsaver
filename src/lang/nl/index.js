@@ -8,7 +8,7 @@ const Lang = {
         navProduce: 'Maak zelf',
         navContact: 'Contact',
         heroTitle: 'Meer comfort voor zorgmedewerkers',
-        heroSubtitle1: 'Het langdurig dragen van een masker geeft ongewenste druk op de oren en kan hoofdpijn veroorzaken. EarSaver is een simpele DIY oplossing voor dit probleem.',
+        heroSubtitle1: 'Het langdurig dragen van een mondkapje geeft ongewenste druk op de oren en kan hoofdpijn veroorzaken. EarSaver is een simpele DIY oplossing voor dit probleem.',
         heroSubtitle2: 'Wij willen ervoor zorgen dat iedere zorgmedewerker een EarSaver heeft.',
         heroSubtitle3: 'Bestel hier jouw EarSaver - het is helemaal gratis!',
         requestButtonTitle: 'Bestel gratis'
@@ -17,24 +17,24 @@ const Lang = {
         title: 'Hoe werkt het?',
         steps: [
             {
-                title: '1. Bevestig één kant',
-                description: 'Bevestig eerst één van de elastiekjes van het masker aan de EarSaver.'
+                title: '1. Maak schoon',
+                description: 'Voor en na gebruik kan de EarSaver makkelijk schoongemaakt worden met alcohol.'
             },
             {
-                title: '2. Plaats achterop hoofd',
-                description: 'Plaats de EarSaver achterop je hoofd terwijl je het masker opzet.'
+                title: '2. Bevestig één kant',
+                description: 'Bevestig eerst één van de elastiekjes van het mondkapje aan de EarSaver.'
             },
             {
-                title: '3. Bevestig de andere kant',
+                title: '3. Plaats achterop hoofd',
+                description: 'Plaats de EarSaver achterop je hoofd terwijl je het mondkapje opzet.'
+            },
+            {
+                title: '4. Bevestig de andere kant',
                 description: 'Bevestig het andere elastiekje aan de EarSaver.'
             },
             {
-                title: '4. Zorg dat het lekker zit',
+                title: '5. Zorg dat het lekker zit',
                 description: 'Je kunt aanpassen hoe strak de EarSaver zit.'
-            },
-            {
-                title: '5. Maak schoon',
-                description: 'Na gebruik kan de EarSaver makkelijk schoongemaakt worden met alcohol.'
             }
         ]
     },
