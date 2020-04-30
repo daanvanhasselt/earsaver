@@ -137,7 +137,7 @@ class IndexPage extends React.Component {
               <h2 className="mb-4">{this.langData.produce.title}</h2>
               <p className="text-muted mb-5">{this.langData.produce.paragraph1}</p>
               <p className="text-muted mb-5">{this.langData.produce.paragraph2}</p>
-              <a className="btn btn-light btn-xl" href="/EarSaver-STL.zip">{this.langData.produce.downloadButtonTitle}</a>
+              <a className="btn btn-light btn-xl" onClick={this.submitGTMEvent("download-stl")} href="/EarSaver-STL.zip">{this.langData.produce.downloadButtonTitle}</a>
             </div>
           </section>
 
