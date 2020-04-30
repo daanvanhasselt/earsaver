@@ -10,14 +10,6 @@ import PortfolioCarousel from "../components/portfolio/carousel"
 
 import Lang from "../lang"
 
-const submitGTMEvent = (event)=> {
-  if(window.dataLayer) {
-      window.dataLayer.push({
-        event: event
-      })
-  }
-}
-
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
@@ -26,8 +18,9 @@ class IndexPage extends React.Component {
       modalShow: false,
       modalCurrent: 0
     }
-    this.handlePortfolioClick = this.handlePortfolioClick.bind(this);
-    this.setModal = this.setModal.bind(this);
+    this.handlePortfolioClick = this.handlePortfolioClick.bind(this)
+    this.setModal = this.setModal.bind(this)
+    this.submitGTMEvent = this.submitGTMEvent.bind(this)
 
     const { langId, langData } = Lang(this.props.pageContext.lang || 'nl')
     this.langId = langId
@@ -45,15 +38,23 @@ class IndexPage extends React.Component {
   }
 
   handlePortfolioClick(index, e) {
-    e.preventDefault();
-    this.setModal(true, index);
+    e.preventDefault()
+    this.setModal(true, index)
+  }
+
+  submitGTMEvent(event) {
+    if(window && window.dataLayer) {
+        window.dataLayer.push({
+          event: event
+        })
+    }
   }
 
   setModal(isShown, current) {
     this.setState({
       modalShow: isShown,
       modalCurrent: current
-    });
+    })
   }
 
   render() {
@@ -164,7 +165,7 @@ class IndexPage extends React.Component {
                 <textarea name="message" className="form-control" id="message" rows="3" placeholder={this.langData.contact.form.messagePlaceholder}></textarea>
               </div>
 
-              <button style={{width:'100%'}} type="submit" onClick={submitGTMEvent("submitForm")} className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
+              <button style={{width:'100%'}} type="submit" onClick={this.submitGTMEvent("submitForm")} className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
             </form>
             
           </div>
