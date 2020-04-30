@@ -10,7 +10,15 @@ import PortfolioCarousel from "../components/portfolio/carousel"
 
 import Lang from "../lang"
 
-export default class IndexPage extends React.Component {
+const submitGTMEvent = (event)=> {
+  if(window.dataLayer) {
+      window.dataLayer.push({
+        event: event
+      })
+  }
+}
+
+class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     Scroller.handleAnchorScroll = Scroller.handleAnchorScroll.bind(this)
@@ -156,7 +164,7 @@ export default class IndexPage extends React.Component {
                 <textarea name="message" className="form-control" id="message" rows="3" placeholder={this.langData.contact.form.messagePlaceholder}></textarea>
               </div>
 
-              <button style={{width:'100%'}} type="submit" className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
+              <button style={{width:'100%'}} type="submit" onClick={submitGTMEvent("submitForm")} className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
             </form>
             
           </div>
@@ -169,6 +177,7 @@ export default class IndexPage extends React.Component {
   }
 }
 
+export default IndexPage
 
 export const imageData = graphql`
   query {
