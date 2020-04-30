@@ -31,6 +31,10 @@ const Lang = {
             {
                 title: '4. Zorg dat het lekker zit',
                 description: 'Je kunt aanpassen hoe strak de EarSaver zit.'
+            },
+            {
+                title: '5. Maak schoon',
+                description: 'Na gebruik kan de EarSaver makkelijk schoongemaakt worden met alcohol.'
             }
         ]
     },

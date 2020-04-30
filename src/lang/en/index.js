@@ -31,6 +31,10 @@ const Lang = {
             {
                 title: '4. Adjust for comfort',
                 description: 'Adjust the tightness and placement of the EarSaver.'
+            },
+            {
+                title: '5. Clean after use',
+                description: 'Easily clean the EarSaver using desinfecting alcohol.'
             }
         ]
     },

@@ -103,6 +103,13 @@ export default class IndexPage extends React.Component {
                   <p className="text-muted mb-0">{this.langData.instructions.steps[3].description}</p>
                 </div>
               </div>
+              <div className="col-lg-12 col-md-12 text-center">
+                <div className="mt-5">
+                <img className="instruction" src="/img/instructions/5.png"/>
+                  <h3 className="h4 mb-2">{this.langData.instructions.steps[4].title}</h3>
+                  <p className="text-muted mb-0">{this.langData.instructions.steps[4].description}</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
