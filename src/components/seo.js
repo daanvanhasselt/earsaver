@@ -73,8 +73,10 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
-    />
+      ].concat(meta)}>
+        <link rel="alternate" href={`http://www.earsaver.com/`} hrefLang={'nl'} key={'nl'}/>
+        <link rel="alternate" href={`http://www.earsaver.com/en`} hrefLang={'en'} key={'en'}/>
+    </Helmet>
   )
 }
 
