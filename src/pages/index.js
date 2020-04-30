@@ -114,7 +114,7 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section id="portfolio">
+        <section id="produce">
           <div className="container-fluid p-0">
             <div className="row no-gutters">
               {this.imageRows}

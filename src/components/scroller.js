@@ -5,9 +5,9 @@ export default class Scroller {
     const id = element.getAttribute('href');
     if(window.dataLayer) {
         window.dataLayer.push({
-        event: 'gatsby-scroll-to-section',
-        section: id.slice(1)
-      })
+          event: 'gatsby-scroll-to-section',
+          section: id.slice(1)
+        })
     }
     const document = element.ownerDocument.scrollingElement || element.ownerDocument.documentElement;
     const scrollNode = document.querySelector(id);

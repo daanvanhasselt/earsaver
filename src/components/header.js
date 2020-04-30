@@ -20,7 +20,7 @@ export default class Header extends React.Component {
             <Navbar.Collapse id="navbarResponsive">
               <Nav className="navbar-nav ml-auto my-2 my-lg-0">
                 <Scrollspy className="navbar-nav"
-                           items={[/*"about", */"instructions", "portfolio", "contact"]}
+                           items={[/*"about", */"instructions", "produce", "contact"]}
                            currentClassName="active" rootEl={"#mainNav"} offset={-75}>
                   {/* <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href="#about" onClick={Scroller.handleAnchorScroll}>About</Nav.Link>
@@ -29,7 +29,7 @@ export default class Header extends React.Component {
                     <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#instructions"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navInstructions}</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#portfolio"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navProduce}</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#produce"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navProduce}</Nav.Link>
                   </li>
                   <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#contact"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navContact}</Nav.Link>
