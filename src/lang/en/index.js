@@ -17,7 +17,7 @@ const Lang = {
         title: 'How To Use',
         steps: [
             {
-                title: '1. Clean after use',
+                title: '1. Clean before and after use',
                 description: 'Easily clean the EarSaver using desinfecting alcohol.'
             },
             {
