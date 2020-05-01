@@ -34,6 +34,9 @@ export default class Header extends React.Component {
                   <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#contact"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navContact}</Nav.Link>
                   </li>
+                  <li className="nav-item">
+                    <Nav.Link className={"js-scroll-trigger"} target="_blank" href={"https://www.gofundme.com/f/earsaver-maakt-mondkapjes-comfortabeler"}>{this.props.lang.header.navDonate}</Nav.Link>
+                  </li>
                   <li className="nav-item d-none d-lg-block">
                     <Nav.Link>|</Nav.Link>
                   </li>
