@@ -165,7 +165,15 @@ class IndexPage extends React.Component {
                 <textarea name="message" className="form-control" id="message" rows="3" placeholder={this.langData.contact.form.messagePlaceholder}></textarea>
               </div>
 
-              <button style={{width:'100%'}} type="submit" onClick={this.submitGTMEvent("submit-contact-form")} className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
+              <button style={{width:'100%'}} type="submit" onClick={() => {
+                const form = document.forms["earsaver-contact"]
+                if(form === undefined) return
+                const input = form["email"]
+                if(input === undefined) return
+                if(input.value === "") return 
+                
+                this.submitGTMEvent("submit-contact-form")
+              }} className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
             </form>
             
           </div>
