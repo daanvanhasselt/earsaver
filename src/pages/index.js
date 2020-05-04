@@ -153,8 +153,11 @@ class IndexPage extends React.Component {
               </div>
             </div>
 
-            <form name="earsaver-contact" method="POST" data-netlify="true">
+            <form name="earsaver-contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
               <input name="form-name" value="earsaver-contact" type="hidden" />
+              <p class="d-none">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
 
               <div className="form-group">
                 <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={this.langData.contact.form.emailPlaceholder} required/>
