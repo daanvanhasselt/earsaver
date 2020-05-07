@@ -7,7 +7,7 @@ const Lang = {
         navInstructions: 'Instructies',
         navProduce: 'Maak zelf',
         navContact: 'Contact',
-        navDonate: 'Doneer',
+        navAbout: 'Over ons',
         heroTitle: 'Meer comfort voor zorgmedewerkers',
         heroSubtitle1: 'Het langdurig dragen van een mondkapje geeft ongewenste druk op de oren en kan hoofdpijn veroorzaken. EarSaver is een simpele DIY oplossing voor dit probleem.',
         heroSubtitle2: 'Wij willen ervoor zorgen dat iedere zorgmedewerker een EarSaver heeft.',
@@ -59,6 +59,18 @@ const Lang = {
             messagePlaceholder: 'Jouw bericht..',
             submitButtonTitle: 'Stuur bericht'
         }
+    },
+    about: {
+        title: 'Over ons',
+        paragraph1: <>Wij zijn een groep vrienden en collega's uit Amsterdam die het belangrijk vinden om iets te kunnen bijdragen in deze crisis. 
+        Door het inzetten van eenvoudige, schaalbare productiemethoden hopen we zo veel mogelijk mensen te bereiken - zowel zorgmedewerkers die baat hebben bij een EarSaver als makers die een steentje willen bijdragen.</>,
+        donateTitle: 'Doneren',
+        paragraph2: <>Wij willen ervoor zorgen dat iedere zorgmedewerker een EarSaver heeft. Om dat te bereiken moeten er EarSavers geproduceerd worden en vervolgens gedistribueerd.
+        Wij dragen hier in principe zelf de kosten voor.
+        Dat neemt niet weg dat deze kosten snel kunnen oplopen als de vraag zo groot is als wij denken. We zouden enorm geholpen worden door jouw donatie. 
+        Met genoeg donaties kunnen we EarSavers blijven maken tot het niet meer nodig is!<br/><br/>
+        Het maken van een EarSaver kost ongeveer €0.50. Dat betekent dat een donatie van 5 euro genoeg is om 10 zorgmedewerkers te helpen!</>,
+        donateButtonTitle: 'Doneer op GoFundMe'
     },
     error: {
         title: 'Er is iets misgegaan',

@@ -7,7 +7,7 @@ const Lang = {
         navInstructions: 'Instructions',
         navProduce: 'Start making',
         navContact: 'Contact',
-        navDonate: 'Donate',
+        navAbout: 'About us',
         heroTitle: 'Increased comfort for healthcare workers',
         heroSubtitle1: 'Wearing a face mask for extended periods of time adds unwanted strain to the ears and can cause headaches. EarSaver is a simple DIY solution to this problem.',
         heroSubtitle2: 'Our aim is to provide every healthcare worker with an EarSaver.',
@@ -59,6 +59,18 @@ const Lang = {
             messagePlaceholder: 'Your message..',
             submitButtonTitle: 'Send message'
         }
+    },
+    about: {
+        title: 'About us',
+        paragraph1: <>We're a group of friends and coworkers based in Amsterdam who feel it's necessary to help out during this crisis.
+        Our aim is to use simple, scaleable production methods to maximise our reach - both within the caregivers who need an EarSaver and makers who want to help out as well.</>,
+        donateTitle: 'Donate',
+        paragraph2: <>Our aim is to provide every healthcare worker with an EarSaver. To achieve this we need to produce and then distribute EarSavers.
+        We pay for this ourselves.
+        However, these costs can quickly become an issue if demand is as high as we believe it is. Your donation would help us a lot.
+        With enough donations we can keep making EarSavers until it is no longer needed!<br/><br/>
+        The cost of making an EarSaver is around €0.50. That means that a donation of €5 is enough to make sure 10 healthcare workers get an EarSaver!</>,
+        donateButtonTitle: 'Donate at GoFundMe'
     },
     error: {
         title: 'Something went wrong',

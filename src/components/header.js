@@ -1,6 +1,6 @@
 import React from "react"
 import Scrollspy from "react-scrollspy"
-import { Navbar, Nav } from "react-bootstrap"
+import { Navbar, Nav, Button } from "react-bootstrap"
 import Scroller from './scroller'
 
 export default class Header extends React.Component {
@@ -20,11 +20,8 @@ export default class Header extends React.Component {
             <Navbar.Collapse id="navbarResponsive">
               <Nav className="navbar-nav ml-auto my-2 my-lg-0">
                 <Scrollspy className="navbar-nav"
-                           items={[/*"about", */"instructions", "produce", "contact"]}
+                           items={["instructions", "produce", "contact", "about"]}
                            currentClassName="active" rootEl={"#mainNav"} offset={-75}>
-                  {/* <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#about" onClick={Scroller.handleAnchorScroll}>About</Nav.Link>
-                  </li> */}
                   <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#instructions"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navInstructions}</Nav.Link>
                   </li>
@@ -35,7 +32,7 @@ export default class Header extends React.Component {
                     <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#contact"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navContact}</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} target="_blank" href={"https://www.gofundme.com/f/earsaver-maakt-mondkapjes-comfortabeler"}>{this.props.lang.header.navDonate}</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href={this.props.error ? "/" : "#about"} onClick={this.props.error ? null : Scroller.handleAnchorScroll}>{this.props.lang.header.navAbout}</Nav.Link>
                   </li>
                   <li className="nav-item d-none d-lg-block">
                     <Nav.Link>|</Nav.Link>

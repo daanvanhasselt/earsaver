@@ -61,21 +61,6 @@ class IndexPage extends React.Component {
     return (
       <Layout lang={this.langData}>
         <SEO title="EarSaver" lang={this.langId}/>
-        {/* <section className="page-section bg-primary" id="about">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-8 text-center">
-                <h2 className="text-white mt-0">We've got what you need!</h2>
-                <hr className="divider light my-4"/>
-                <p className="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up
-                  and
-                  running in no time! Choose one of our open source, free to download, and easy to use themes! No
-                  strings
-                  attached!</p>
-              </div>
-            </div>
-          </div>
-        </section> */}
 
         <section className="page-section" id="instructions">
           <div className="container">
@@ -188,6 +173,25 @@ class IndexPage extends React.Component {
               }} className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
             </form>
             
+          </div>
+        </section>
+
+        <section className="page-section bg-primary" id="about">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-8 text-center">
+                <h2 className="text-white mt-0">{this.langData.about.title}</h2>
+                <hr className="divider light my-4"/>
+                <p className="text-white-50 mb-4">{this.langData.about.paragraph1}</p>
+
+                <h2 className="text-white mt-0">{this.langData.about.donateTitle}</h2>
+                <hr className="divider light my-4"/>
+                <p className="text-white-50 mb-4">{this.langData.about.paragraph2}</p>
+
+                <a className="btn btn-light btn-xl" onClick={this.submitGTMEvent("donate")} href="https://www.gofundme.com/f/earsaver-maakt-mondkapjes-comfortabeler">{this.langData.about.donateButtonTitle}</a>
+
+              </div>
+            </div>
           </div>
         </section>
         <PortfolioModal show={this.state.modalShow} onHide={() => this.setModal(false, 0)}>
