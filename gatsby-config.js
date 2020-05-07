@@ -4,7 +4,7 @@ module.exports = {
   pathPrefix: `/gatsby-creative`,
   siteMetadata: {
     title: `EarSaver`,
-    description: `EarSaver maakt het dragen van een masker een stuk comfortabeler.`,
+    description: `EarSaver maakt het dragen van een mondkapje een stuk comfortabeler.`,
     author: `Daan van Hasselt`,
     siteUrl: `https://www.earsaver.nl`
   },
