@@ -72,8 +72,6 @@ class IndexPage extends React.Component {
                   running in no time! Choose one of our open source, free to download, and easy to use themes! No
                   strings
                   attached!</p>
-                <a className="btn btn-light btn-xl js-scroll-trigger" href="#services"
-                   onClick={Scroller.handleAnchorScroll}>Get Started!</a>
               </div>
             </div>
           </div>
@@ -137,6 +135,18 @@ class IndexPage extends React.Component {
               <h2 className="mb-4">{this.langData.produce.title}</h2>
               <p className="text-muted mb-5">{this.langData.produce.paragraph1}</p>
               <p className="text-muted mb-5">{this.langData.produce.paragraph2}</p>
+
+              <div style={{paddingTop:'56.25%', marginBottom: 60, position:'relative'}}>
+                <iframe src="https://player.vimeo.com/video/415844850?color=1A79F9&byline=0&portrait=0" 
+                  style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} 
+                  frameborder="0" allow="autoplay; fullscreen" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
+
+              <p className="text-muted mb-5">{this.langData.produce.paragraph3}</p>
+
               <a className="btn btn-light btn-xl" onClick={this.submitGTMEvent("download-stl")} href="/EarSaver-STL.zip">{this.langData.produce.downloadButtonTitle}</a>
             </div>
           </section>

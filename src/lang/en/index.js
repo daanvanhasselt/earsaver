@@ -5,7 +5,7 @@ const Lang = {
     header: {
         navTitle: 'EarSaver',
         navInstructions: 'Instructions',
-        navProduce: 'Start producing',
+        navProduce: 'Start making',
         navContact: 'Contact',
         navDonate: 'Donate',
         heroTitle: 'Increased comfort for healthcare workers',
@@ -40,10 +40,13 @@ const Lang = {
         ]
     },
     produce: {
-        title: 'Download the 3D model',
-        paragraph1: 'Wanna help out? Download the STL file and start making EarSavers!',
-        paragraph2: <>A full <i>Production Kit</i> with more resources and instructions will be available soon.</>,
-        downloadButtonTitle: 'Download Now!'
+        title: 'Make EarSavers',
+        paragraph1: 'Wanna help out? You can start making EarSavers yourself!',
+        paragraph2: <>If you have access to a 3D printer you can easily print the 3D model. <br/>
+        We use a PU resin to cast the EarSavers. We made a video detailing the process.</>,
+        paragraph3: <>Would you like to make molds, pour EarSavers or produce them in another way? <br/>
+        We'd love to help you get started - get in touch through the form below.</>,
+        downloadButtonTitle: 'Download STL file'
     },
     contact: {
         title: 'Get in touch!',

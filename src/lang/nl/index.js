@@ -40,10 +40,13 @@ const Lang = {
         ]
     },
     produce: {
-        title: 'Download het 3D model',
-        paragraph1: 'Help je mee? Download het STL bestand en maak zelf ook EarSavers!',
-        paragraph2: <>Binnenkort vind je hier een complete <i>Production Kit</i> met meer informatie en instructies.</>,
-        downloadButtonTitle: 'Download Nu!'
+        title: 'Maak zelf EarSavers',
+        paragraph1: 'Help je mee? Je kunt zelf ook EarSavers maken!',
+        paragraph2: <>Als je een 3D printer tot je beschikking hebt kun je eenvoudig het 3D model printen. <br/>
+        Wij zelf gieten EarSavers met een urethaan hars, hiervoor hebben we een instructie video gemaakt.</>,
+        paragraph3: <>Wil je zelf ook mallen maken, gieten, of op een andere manier EarSavers produceren? <br/>
+        We helpen je graag op weg. Neem contact op via het formulier!</>,
+        downloadButtonTitle: 'Download STL bestand'
     },
     contact: {
         title: 'Contact',
