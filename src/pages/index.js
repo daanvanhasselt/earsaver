@@ -130,9 +130,8 @@ class IndexPage extends React.Component {
 
           <section className="page-section bg-dark text-white">
             <div className="container text-center">
-              {/* <h2 className="mb-4">Download the Production Kit</h2>
-              <p className="text-muted mb-5">Wanna help out? Download the Production Kit and start making EarSavers!</p> */}
               <h2 className="mb-4">{this.langData.produce.title}</h2>
+              <hr className="divider light my-4"/>
               <p className="text-muted mb-5">{this.langData.produce.paragraph1}</p>
               <p className="text-muted mb-5">{this.langData.produce.paragraph2}</p>
 
