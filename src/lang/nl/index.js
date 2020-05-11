@@ -54,10 +54,23 @@ const Lang = {
         We horen graag van je!<br/><br/>
         Vul hier je email en bericht in en we komen zo snel mogelijk bij je terug.</>,
         form: {
-            emailPlaceholder: 'Jouw email',
-            emailDisclaimer: 'We zullen je email nooit met anderen delen.',
-            messagePlaceholder: 'Jouw bericht..',
-            submitButtonTitle: 'Stuur bericht'
+            order: {
+                title: 'Bestellen',
+                emailPlaceholder: 'Jouw email',
+                emailDisclaimer: 'We zullen je email nooit met anderen delen.',
+                organisationPlaceholder: 'Organisatie',
+                organisationHelp: 'Vul hier in voor welke organisatie je werkt',
+                quantityHelp: 'Geef hier aan hoeveel EarSavers je nodig hebt',
+                messagePlaceholder: 'Jouw bericht..',
+                submitButtonTitle: 'Bestel'
+            },
+            general: {
+                title: 'Contact',
+                emailPlaceholder: 'Jouw email',
+                emailDisclaimer: 'We zullen je email nooit met anderen delen.',
+                messagePlaceholder: 'Jouw bericht..',
+                submitButtonTitle: 'Stuur bericht'
+            }
         }
     },
     about: {

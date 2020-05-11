@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Accordion, Card, Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -123,8 +124,8 @@ class IndexPage extends React.Component {
               <div style={{paddingTop:'56.25%', marginBottom: 60, position:'relative'}}>
                 <iframe src="https://player.vimeo.com/video/415844850?color=1A79F9&byline=0&portrait=0" 
                   style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} 
-                  frameborder="0" allow="autoplay; fullscreen" 
-                  allowfullscreen>
+                  frameBorder="0" allow="autoplay; fullscreen" 
+                  allowFullScreen>
                 </iframe>
               </div>
               <script src="https://player.vimeo.com/api/player.js"></script>
@@ -147,32 +148,90 @@ class IndexPage extends React.Component {
               </div>
             </div>
 
-            <form name="earsaver-contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-              <input name="form-name" value="earsaver-contact" type="hidden" />
-              <p class="d-none">
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-              </p>
+            <Accordion defaultActiveKey="0">
+              <Card>
+                <Card.Header>
+                  <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                    {this.langData.contact.form.order.title}
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="0">
+                  <Card.Body>
+                    <form name="earsaver-order" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                      <input name="form-name" value="earsaver-order" type="hidden" />
+                      <p className="d-none">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                      </p>
 
-              <div className="form-group">
-                <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={this.langData.contact.form.emailPlaceholder} required/>
-                <small id="emailHelp" className="form-text text-muted">{this.langData.contact.form.emailDisclaimer}</small>
-              </div>
+                      <div className="form-group">
+                        <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={this.langData.contact.form.order.emailPlaceholder} required/>
+                        <small id="emailHelp" className="form-text text-muted">{this.langData.contact.form.order.emailDisclaimer}</small>
+                      </div>
 
-              <div className="form-group">
-                <textarea name="message" className="form-control" id="message" rows="3" placeholder={this.langData.contact.form.messagePlaceholder}></textarea>
-              </div>
+                      <div className="form-group">
+                        <input name="organisation" type="text" className="form-control" id="organisation" aria-describedby="organisationHelp" placeholder={this.langData.contact.form.order.organisationPlaceholder} required/>
+                        <small id="organisationHelp" className="form-text text-muted">{this.langData.contact.form.order.organisationHelp}</small>
+                      </div>
 
-              <button style={{width:'100%'}} type="submit" onClick={() => {
-                const form = document.forms["earsaver-contact"]
-                if(form === undefined) return
-                const input = form["email"]
-                if(input === undefined) return
-                if(input.value === "") return 
-                
-                this.submitGTMEvent("submit-contact-form")
-              }} className="btn btn-primary">{this.langData.contact.form.submitButtonTitle}</button>
-            </form>
-            
+                      <div className="form-group">
+                        <input name="quantity" type="number" className="form-control" id="quantity" aria-describedby="quantityHelp" placeholder={1} min={1} max={500} required/>
+                        <small id="quantityHelp" className="form-text text-muted">{this.langData.contact.form.order.quantityHelp}</small>
+                      </div>
+
+                      <div className="form-group">
+                        <textarea name="message" className="form-control" id="message" rows="3" placeholder={this.langData.contact.form.order.messagePlaceholder}></textarea>
+                      </div>
+
+                      <button style={{width:'100%'}} type="submit" onClick={() => {
+                        const form = document.forms["earsaver-contact"]
+                        if(form === undefined) return
+                        const input = form["email"]
+                        if(input === undefined) return
+                        if(input.value === "") return 
+                        
+                        this.submitGTMEvent("submit-order-form")
+                      }} className="btn btn-primary">{this.langData.contact.form.order.submitButtonTitle}</button>
+                    </form>            
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+              <Card>
+                <Card.Header>
+                  <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                  {this.langData.contact.form.general.title}
+                  </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="1">
+                  <Card.Body>
+                    <form name="earsaver-contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                      <input name="form-name" value="earsaver-contact" type="hidden" />
+                      <p className="d-none">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                      </p>
+
+                      <div className="form-group">
+                        <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={this.langData.contact.form.general.emailPlaceholder} required/>
+                        <small id="emailHelp" className="form-text text-muted">{this.langData.contact.form.general.emailDisclaimer}</small>
+                      </div>
+
+                      <div className="form-group">
+                        <textarea name="message" className="form-control" id="message" rows="3" placeholder={this.langData.contact.form.general.messagePlaceholder}></textarea>
+                      </div>
+
+                      <button style={{width:'100%'}} type="submit" onClick={() => {
+                        const form = document.forms["earsaver-contact"]
+                        if(form === undefined) return
+                        const input = form["email"]
+                        if(input === undefined) return
+                        if(input.value === "") return 
+                        
+                        this.submitGTMEvent("submit-contact-form")
+                      }} className="btn btn-primary">{this.langData.contact.form.general.submitButtonTitle}</button>
+                    </form>            
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+            </Accordion>
           </div>
         </section>
 

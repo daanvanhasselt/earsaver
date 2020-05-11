@@ -54,10 +54,23 @@ const Lang = {
         We love to hear from you!<br/><br/>
         Please fill in the form below and we will get back to you as soon as possible.</>,
         form: {
-            emailPlaceholder: 'Your email',
-            emailDisclaimer: "We'll never share your email with anyone else.",
-            messagePlaceholder: 'Your message..',
-            submitButtonTitle: 'Send message'
+            order: {
+                title: 'Request EarSavers',
+                emailPlaceholder: 'Your email',
+                emailDisclaimer: "We'll never share your email with anyone else.",
+                organisationPlaceholder: 'Organisation',
+                organisationHelp: 'Please tell use for which organisation you work',
+                quantityHelp: 'How many EarSavers would you like?',
+                messagePlaceholder: 'Your message..',
+                submitButtonTitle: 'Request'
+            },
+            general: {
+                title: 'Contact us',
+                emailPlaceholder: 'Your email',
+                emailDisclaimer: "We'll never share your email with anyone else.",
+                messagePlaceholder: 'Your message..',
+                submitButtonTitle: 'Send message'
+            }
         }
     },
     about: {
