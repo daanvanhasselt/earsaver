@@ -8,6 +8,7 @@ const Lang = {
         navProduce: 'Start making',
         navContact: 'Contact',
         navAbout: 'About us',
+        navDonate: 'Donate',
         heroTitle: 'Increased comfort for healthcare workers',
         heroSubtitle1: 'Wearing a face mask for extended periods of time adds unwanted strain to the ears and can cause headaches. EarSaver is a simple DIY solution to this problem.',
         heroSubtitle2: 'Our aim is to provide every healthcare worker with an EarSaver.',

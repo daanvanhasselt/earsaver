@@ -8,6 +8,7 @@ const Lang = {
         navProduce: 'Maak zelf',
         navContact: 'Contact',
         navAbout: 'Over ons',
+        navDonate: 'Doneer',
         heroTitle: 'Meer comfort voor zorgmedewerkers',
         heroSubtitle1: 'Het langdurig dragen van een mondkapje geeft ongewenste druk op de oren en kan hoofdpijn veroorzaken. EarSaver is een simpele DIY oplossing voor dit probleem.',
         heroSubtitle2: 'Wij willen ervoor zorgen dat iedere zorgmedewerker een EarSaver heeft.',
