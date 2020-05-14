@@ -84,7 +84,8 @@ const Lang = {
         Dat neemt niet weg dat deze kosten snel kunnen oplopen als de vraag zo groot is als wij denken. We zouden enorm geholpen worden door jouw donatie. 
         Met genoeg donaties kunnen we EarSavers blijven maken tot het niet meer nodig is!<br/><br/>
         Het maken van een EarSaver kost ongeveer €0.50. Dat betekent dat een donatie van 5 euro genoeg is om 10 zorgmedewerkers te helpen!</>,
-        donateButtonTitle: 'Doneer op GoFundMe'
+        donateButtonTitle: 'Doneer op GoFundMe',
+        donatedParagraph: (num) => (<>Er zijn tot nu toe <span className="h3">{num}</span> EarSavers gedoneerd!</>)
     },
     error: {
         title: 'Er is iets misgegaan',

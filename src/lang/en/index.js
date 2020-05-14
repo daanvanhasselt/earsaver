@@ -84,7 +84,8 @@ const Lang = {
         However, these costs can quickly become an issue if demand is as high as we believe it is. Your donation would help us a lot.
         With enough donations we can keep making EarSavers until it is no longer needed!<br/><br/>
         The cost of making an EarSaver is around €0.50. That means that a donation of €5 is enough to make sure 10 healthcare workers get an EarSaver!</>,
-        donateButtonTitle: 'Donate at GoFundMe'
+        donateButtonTitle: 'Donate at GoFundMe',
+        donatedParagraph: (num) => (<>So far <span className="h3">{num}</span> EarSavers have been donated!</>)
     },
     error: {
         title: 'Something went wrong',

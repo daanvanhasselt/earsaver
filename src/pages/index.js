@@ -251,6 +251,17 @@ class IndexPage extends React.Component {
 
               </div>
             </div>
+
+            <hr className="divider light my-4"/>
+            
+            <div className="row justify-content-center">
+              <div className="col-lg-8 text-center">
+                <p className="text-white-50 mb-4">{this.langData.about.donatedParagraph(131)}</p>
+                
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NWTP8JSZ50ZMa1k2olUn-ZL44T4QsVoS" width="640" height="480"></iframe>
+                
+              </div>
+            </div>
           </div>
         </section>
         <PortfolioModal show={this.state.modalShow} onHide={() => this.setModal(false, 0)}>
