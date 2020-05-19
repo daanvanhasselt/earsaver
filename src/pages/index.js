@@ -164,6 +164,11 @@ class IndexPage extends React.Component {
                       </p>
 
                       <div className="form-group">
+                        <input name="name" type="text" className="form-control" id="name" aria-describedby="nameHelp" placeholder={this.langData.contact.form.order.namePlaceholder} required/>
+                        <small id="nameHelp" className="form-text text-muted">{this.langData.contact.form.order.nameDisclaimer}</small>
+                      </div>
+
+                      <div className="form-group">
                         <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={this.langData.contact.form.order.emailPlaceholder} required/>
                         <small id="emailHelp" className="form-text text-muted">{this.langData.contact.form.order.emailDisclaimer}</small>
                       </div>
@@ -208,6 +213,11 @@ class IndexPage extends React.Component {
                       <p className="d-none">
                         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                       </p>
+
+                      <div className="form-group">
+                        <input name="name" type="text" className="form-control" id="name" aria-describedby="nameHelp" placeholder={this.langData.contact.form.general.namePlaceholder} required/>
+                        <small id="nameHelp" className="form-text text-muted">{this.langData.contact.form.general.nameDisclaimer}</small>
+                      </div>
 
                       <div className="form-group">
                         <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder={this.langData.contact.form.general.emailPlaceholder} required/>
@@ -256,7 +266,7 @@ class IndexPage extends React.Component {
             
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <p className="text-white-50 mb-4">{this.langData.about.donatedParagraph(131)}</p>
+                <p className="text-white-50 mb-4">{this.langData.about.donatedParagraph(182)}</p>
                 
                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NWTP8JSZ50ZMa1k2olUn-ZL44T4QsVoS" width="640" height="480"></iframe>
                 

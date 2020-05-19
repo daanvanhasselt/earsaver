@@ -57,8 +57,10 @@ const Lang = {
         form: {
             order: {
                 title: 'Request EarSavers',
+                namePlaceholder: 'Your name',
+                nameDisclaimer: 'Please fill in your name',
                 emailPlaceholder: 'Your email',
-                emailDisclaimer: "We'll never share your email with anyone else.",
+                emailDisclaimer: "We'll never share your email with anyone else",
                 organisationPlaceholder: 'Organisation',
                 organisationHelp: 'Please tell use for which organisation you work',
                 quantityHelp: 'How many EarSavers would you like?',
@@ -67,6 +69,8 @@ const Lang = {
             },
             general: {
                 title: 'Contact us',
+                namePlaceholder: 'Your name',
+                nameDisclaimer: 'Please fill in your name',
                 emailPlaceholder: 'Your email',
                 emailDisclaimer: "We'll never share your email with anyone else.",
                 messagePlaceholder: 'Your message..',

@@ -57,8 +57,10 @@ const Lang = {
         form: {
             order: {
                 title: 'Bestellen',
+                namePlaceholder: 'Jouw naam',
+                nameDisclaimer: 'Vul hier je naam in',
                 emailPlaceholder: 'Jouw email',
-                emailDisclaimer: 'We zullen je email nooit met anderen delen.',
+                emailDisclaimer: 'We zullen je email nooit met anderen delen',
                 organisationPlaceholder: 'Organisatie',
                 organisationHelp: 'Vul hier in voor welke organisatie je werkt',
                 quantityHelp: 'Geef hier aan hoeveel EarSavers je nodig hebt',
@@ -67,6 +69,8 @@ const Lang = {
             },
             general: {
                 title: 'Contact',
+                namePlaceholder: 'Jouw naam',
+                nameDisclaimer: 'Vul hier je naam in',
                 emailPlaceholder: 'Jouw email',
                 emailDisclaimer: 'We zullen je email nooit met anderen delen.',
                 messagePlaceholder: 'Jouw bericht..',
