@@ -268,7 +268,7 @@ class IndexPage extends React.Component {
               <div className="col-lg-8 text-center">
                 <p className="text-white-50 mb-4">{this.langData.about.donatedParagraph(212)}</p>
                 
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NWTP8JSZ50ZMa1k2olUn-ZL44T4QsVoS" width="640" height="480"></iframe>
+                <img className="map" src="/img/map.png"/>
                 
               </div>
             </div>
