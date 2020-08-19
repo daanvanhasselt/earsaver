@@ -266,7 +266,7 @@ class IndexPage extends React.Component {
             
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <p className="text-white-50 mb-4">{this.langData.about.donatedParagraph(212)}</p>
+                <p className="text-white-50 mb-4">{this.langData.about.donatedParagraph(262)}</p>
                 
                 <img className="map" src="/img/map.png"/>
                 
