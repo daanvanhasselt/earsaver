@@ -63,9 +63,10 @@ const Lang = {
                 emailDisclaimer: "We'll never share your email with anyone else",
                 organisationPlaceholder: 'Organisation',
                 organisationHelp: 'Please tell use for which organisation you work',
-                quantityHelp: 'How many EarSavers would you like?',
+                quantityHelp: 'How many EarSavers would you like? Maximum 10',
                 messagePlaceholder: 'Your message..',
-                submitButtonTitle: 'Request'
+                submitButtonTitle: 'Request',
+                disabledText: 'We are currently not taking orders due to the overwhelming interest. Please come back later to request your EarSavers. Sorry!'
             },
             general: {
                 title: 'Contact us',

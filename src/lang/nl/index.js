@@ -63,9 +63,10 @@ const Lang = {
                 emailDisclaimer: 'We zullen je email nooit met anderen delen',
                 organisationPlaceholder: 'Organisatie',
                 organisationHelp: 'Vul hier in voor welke organisatie je werkt',
-                quantityHelp: 'Geef hier aan hoeveel EarSavers je nodig hebt',
+                quantityHelp: 'Geef hier aan hoeveel EarSavers je nodig hebt. Maximaal 10',
                 messagePlaceholder: 'Jouw bericht..',
-                submitButtonTitle: 'Bestel'
+                submitButtonTitle: 'Bestel',
+                disabledText: 'Vanwege de overweldigende belangstelling nemen we op dit moment geen bestellingen meer aan. Kom later terug om alsnog een bestelling te plaatsen. Excuses!'
             },
             general: {
                 title: 'Contact',
