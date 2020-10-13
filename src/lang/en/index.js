@@ -66,7 +66,7 @@ const Lang = {
                 quantityHelp: 'How many EarSavers would you like? Maximum 10',
                 messagePlaceholder: 'Your message..',
                 submitButtonTitle: 'Request',
-                disabledText: 'We are currently not taking orders due to the overwhelming interest. Please come back later to request your EarSavers. Sorry!'
+                disabledText: 'Due to the overwhelming interest we are currently not taking any new orders. Please come back later to request your EarSavers. Sorry!'
             },
             general: {
                 title: 'Contact us',

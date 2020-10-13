@@ -158,6 +158,7 @@ class IndexPage extends React.Component {
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>
                   
+                    {/*
                     <form name="earsaver-order" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                       <input name="form-name" value="earsaver-order" type="hidden" />
                       <p className="d-none">
@@ -175,7 +176,7 @@ class IndexPage extends React.Component {
                       </div>
 
                       <div className="form-group">
-                        <input name="organisation" type="text" className="form-control" id="organisation" aria-describedby="organisationHelp" placeholder={this.langData.contact.form.order.organisationPlaceholder} required/>
+                        <input name"=organisation" type="text" className="form-control" id="organisation" aria-describedby="organisationHelp" placeholder={this.langData.contact.form.order.organisationPlaceholder} required/>
                         <small id="organisationHelp" className="form-text text-muted">{this.langData.contact.form.order.organisationHelp}</small>
                       </div>
 
@@ -198,13 +199,13 @@ class IndexPage extends React.Component {
                         this.submitGTMEvent("submit-order-form")
                       }} className="btn btn-primary">{this.langData.contact.form.order.submitButtonTitle}</button>
                     </form>            
-                  
+                    */}
 
-                    {/* 
+                    { 
                     <div className="container text-center">
                       <p className="text-muted mb-5">{this.langData.contact.form.order.disabledText}</p>
                     </div>
-                    */}
+                    }
 
                   </Card.Body>
                 </Accordion.Collapse>
